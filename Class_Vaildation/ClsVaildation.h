@@ -15,6 +15,7 @@ class clsVaildate
   }
   return false;
 }
+
 static bool IsNumberBetween(double Number , double From , double To)
 {
   if(Number>From&&Number<To)
@@ -37,6 +38,17 @@ static int ReadIntNumber()
 static double ReaddoubleNumber()
   {
     double Number;
+    while (!(cin >> Number)) 
+  {
+      cin.clear();
+      cin.ignore(numeric_limits<streamsize>::max(), '\n');
+      cout<<"Invalid Number, Enter again\n";
+    }
+    return Number;
+  }
+  static float ReadFloatNumber()
+  {
+    float Number;
     while (!(cin >> Number)) 
   {
       cin.clear();
