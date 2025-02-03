@@ -64,5 +64,10 @@ cout<<"Please, Enter Number Between (From:"<<From<<"-"<<"To:"<<To<<")?";
   }while(!(cin>>Number)||!(IsNumberBetween(Number,From,To)));
   return Number; 
 }
-
+static string ReadString()
+{
+    string S1 = "";
+    getline(cin, S1);
+    return S1;
+}
 };
